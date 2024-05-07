@@ -1,0 +1,462 @@
+// HEADER
+header {
+   position: sticky;
+   top: 0px;
+   z-index: 9999;
+   height: 80px;
+ .home-bar {
+   position: relative;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   background-color: #FFD5A2;
+   z-index: 30;
+   height: 80px;
+   a {
+   font-family: "Quicksand", sans-serif;
+   font-size: 21.5px;
+   }
+ }
+   a {
+   text-decoration: none;
+ }
+ .nav__images {
+   position: absolute; 
+   width: 100%;
+   height: 100%;
+   &-absolute  {
+      position: absolute;
+   }
+   &-cats {
+   width: 80px;
+   height: 80px;
+   }
+   &-1 {
+      right: -80px;
+      bottom : -80px;
+   }
+   &-2 {
+      z-index: 10;
+      top: 20%;
+      left : 100px;
+    }
+   &-3 {
+      left: 50px;
+      bottom : 10%;
+    }
+   &-4 {
+      right: 20%;
+      bottom : 30%;
+    }
+   &-5 {
+      top: 10%;
+      left: -25px;
+      width: 100px;
+      height: 100px;
+   }
+   &-6 {
+      width: 140px;
+      height: 140px;
+      top: 15%;
+      right: 7%;
+   }
+   &-7 {
+      width: 50px;
+      height: 50px;
+      left: 90px;
+      bottom : 40%;
+      
+   }
+   &-8 {
+      width: 70px;
+      height: 70px;
+      right: -20px;
+      top: 50%;
+   }
+   &-flowers {
+      animation: spin 15s linear infinite;
+   }
+ }
+ .nav-toggler {
+   position: absolute;
+   z-index: 10;
+   right: 30px;
+   height: 20px;
+   width: 40px;
+   border-radius: 50%;
+   border: none;
+   outline: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: transparent;
+   cursor: pointer;
+ }
+ .line {
+   position: absolute;
+   display: block;
+   width: 100%;
+   height: 1px;
+   background: #000;
+   transition: transform 0.3 ease-out,
+   opacity 0.1s ease-out;
+ }
+ .l1 {
+   transform: translateY(-10px);
+ }
+ .l3 {
+   transform: translateY(10px);
+ }
+ .nav-toggler.active .l1 {
+   transform: translateY(0px) rotate(45deg)
+ }
+ .nav-toggler.active .l2 {
+   opacity: 0;  
+ }
+ .nav-toggler.active .l3 {
+   transform: translateY(0px) rotate(-45deg)
+ }
+ nav {
+   position:absolute;
+   z-index: 29;
+   background: #FFF5E9;
+   display: flex;
+   justify-content:space-evenly;
+   flex-direction: column;
+   align-items: center;
+   gap : 10px;
+   width: 100%;
+   height: 93vh;
+   border-bottom: 1px solid black;
+   transform: translateY(-140%);
+   transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+   overflow: hidden;
+   a {
+      color: black;
+      text-decoration: none;
+    }
+   &.active {
+      transform: translateY(0);
+    }
+   ul {
+      margin: 0;
+      padding-inline-start: 0;
+      li {
+         list-style: none;
+         display: flex;
+         justify-content:space-evenly;
+         align-items: center;
+         flex-direction: column;
+       }
+      a {
+         color :black; 
+         text-decoration: none;
+         font-size: 20px; 
+         margin: 10px 0; 
+         padding: 10px;
+         z-index: 20;
+        } 
+      a:hover { 
+         text-shadow: 0px 0px 2px   #FF5C00; 
+       } 
+    }
+ }
+}
+//
+img {
+   max-width: none;
+}
+
+
+//section hero 
+.banner { 
+   max-width: 1440px;
+   background-image: none;
+   z-index: 2;
+   min-height: 100px;
+
+   &__video {
+      
+      position: relative;
+      width: 100%;
+      animation-duration: 2s;
+      animation-name: fadeInTop;
+     }
+      &__parallax {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-duration: 2s;
+      animation-name: fadeInBottom;
+      }
+      &__parallax img {
+      width: 80%;
+      height: 60%;
+      top: 10%;
+     }
+}
+
+//section oscars
+
+.oscars {
+   display: flex;
+   justify-content: space-between;
+   width: 80%;
+   margin-top: 1em;
+   justify-content: center;
+   align-items: center;
+   &__title {
+      background-image: url("assets/images/orange_rectangle.png");
+      padding: 2em 2em;
+      background-size: cover;
+      min-width: 80%;
+      text-align: left;  
+   }
+}
+
+.story {
+   overflow: hidden;
+   .main-character {
+      width: 100%;
+   }
+   #place {
+      background-image: none;
+      &__banner {
+         width: 100%;
+      }
+      &__text {
+         position: absolute;
+         width: 40%;
+      }
+      &__text {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+          align-items: flex-start;
+          margin-left: 6em;
+      }
+      img {
+         object-fit: cover;
+      }
+      .nuages {
+         position: absolute;
+         top: 7%;
+      }
+   }
+}
+
+
+// SWIPER
+
+.swiper {
+   width: 100%;
+   padding-top: 50px;
+   padding-bottom: 50px;
+ }
+
+ .swiper-slide {
+   background-position: center;
+   background-size: cover;
+   width: 300px;
+   height: 300px;
+ }
+
+ .swiper-slide img {
+   display: block;
+   width: 100%;
+ }
+
+.swiper-3d .swiper-slide-shadow-coverflow {
+   background-image: none;
+ }
+
+
+
+
+#studio {
+   & div {
+      margin-bottom: 4rem;
+   }
+}
+
+// Animation floating images
+.floating-Y {
+   animation: floating-Y 10s ease-in-out 2s infinite ;
+}
+
+
+
+
+//    Keyframes   //
+//fade in top
+@keyframes fadeInTop {
+   from {
+      opacity: 0;
+      transform: translateY(-100%);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0%);
+   }
+}
+// fade in bottom
+@keyframes fadeInBottom {
+   from {
+      opacity: 0;
+      transform: translateY(100%);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0%);
+   }
+}
+// effet flotement 
+@keyframes floating-Y {
+   0% {
+      transform: translate(0px, 0px)
+   }
+   10% {
+      transform: translate(-5px, 5px)
+   }
+   20% {
+      transform: translate(5px, -5px)
+   }
+   30% {
+      transform: translate(0px, 5px)
+   }
+   40% {
+      transform: translate(5px, 10px)
+   }
+   50% {
+      transform: translate(10px, 5px)
+   }
+   60% {
+      transform: translate(5px, 0px)
+   }
+   70% {
+      transform: translate(10px, 5px)
+   }
+   80% {
+      transform: translate(5px, 0px)
+   }
+   90% {
+      transform: translate(3px, 2px)
+
+   }
+   100% {
+      transform: translate(0px, 0px)
+   }
+}
+
+//    FIN KeyFrames  // 
+//    Spin fleurs    //
+::after,
+#studio h2::before,
+#colophon::before {
+   animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+100% { 
+    transform: rotate(360deg); 
+  }
+}
+//
+
+//fade in section
+section:not(.banner) {
+   animation-duration: 2s;
+   animation-name: fadeInBottom;
+}
+
+// Animation observable titres fade In
+.hidden {
+   display: inline-block;
+   opacity: 1;
+   transition: 0.5s;
+} 
+
+.title__fadeIn {
+   opacity: 0.5;
+   transform: translateY(100%);
+ }  
+
+.title__fadeIn-delayed {
+   transition-delay: 100ms
+}
+//
+
+// MEDIA QUERIES
+
+@media (max-width: 920px) {
+   body {
+   header {
+      .nav-toggler {
+         right: 15px;
+      }
+      .nav__images {
+         &-2 {
+            top: 25%;
+            left: 1%;
+         }
+         &-3 {
+            left: 10px;
+         }
+         &-4 {
+            right: 2%
+         }
+         &-6 {
+            top: 26%;
+            right: -7%;
+         }
+         &-7 {
+            left: 16px;
+         }
+      }
+   }
+
+   .banner {
+      &__parallax {
+         top: -40%;
+      }
+      &__parallax img {
+         
+         height: 120px;
+      }
+   }
+   .story {
+   #place {
+      & > div { 
+         max-width: 100%;
+      }
+      & img { 
+         min-height: 699px;
+      }
+      &__text{
+         width: 70%;
+      }
+      &__banner {
+         width: 100%; 
+         overflow: hidden;
+         max-width: 100%;
+         margin-left: 0;
+   
+      }
+      .nuages {
+         display: none;
+      }
+   }
+   }
+   .oscars {
+      flex-direction: column;
+      &__title {
+         font-size: 1.1rem;
+         padding: 1rem;
+         width: 100%;
+
+      }
+   }
+
+}
+}
